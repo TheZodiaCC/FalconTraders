@@ -15,12 +15,15 @@ class FalconSafeZoneHelpers
         if( type == CallType.Client ) {
 			PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
 			
-			player.setIsInSafeZone(true);
+			if (data.param1 == player.GetIdentity().GetId()) 
+			{
+				player.setIsInSafeZone(true);
+			}
         }
     }
 	
-	void turnOnMarks() {
-		GetRPCManager().SendRPC( "Falcon", "turnOnSZMarkC", new Param1<string>("") );
+	void turnOnMarks(string playerID) {
+		GetRPCManager().SendRPC( "Falcon", "turnOnSZMarkC", new Param1<string>(playerID) );
 	}
 	
 	private void turnOffSZMarkC( CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target )
@@ -32,11 +35,14 @@ class FalconSafeZoneHelpers
         if( type == CallType.Client ) {
 			PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
 			
-			player.setIsInSafeZone(false);
+			if (data.param1 == player.GetIdentity().GetId()) 
+			{
+				player.setIsInSafeZone(false);
+			}
         }
     }
 	
-	void turnOffMarks() {
-		GetRPCManager().SendRPC( "Falcon", "turnOffSZMarkC", new Param1<string>("") );
+	void turnOffMarks(string playerID) {
+		GetRPCManager().SendRPC( "Falcon", "turnOffSZMarkC", new Param1<string>(playerID) );
 	}
 }
