@@ -18,12 +18,11 @@ class FalconSafeZoneUtils
 			
 			if (playerSafeZoneDistance <= safeZoneRadius) 
 			{
-				//Print(player.GetIdentity().GetName() + " " + playerSafeZoneDistance);
-				
 				p = PlayerBase.Cast(player);
 				playerID = p.GetIdentity().GetId();
 				
 				p.setIsInSafeZone(true);
+				p.setHasGM(true);
 				
 				SafeZoneHelpers.turnOnMarks(playerID);
 			}
@@ -33,6 +32,7 @@ class FalconSafeZoneUtils
 				playerID = p.GetIdentity().GetId();
 				
 				p.setIsInSafeZone(false);
+				p.setHasGM(false);
 				
 				SafeZoneHelpers.turnOffMarks(playerID);
 			}
