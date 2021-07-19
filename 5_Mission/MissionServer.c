@@ -10,7 +10,7 @@ modded class MissionServer
 	
 	void MissionServer()
 	{
-		 SafeZoneHelpers = new FalconSafeZoneHelpers();
+		SafeZoneHelpers = new FalconSafeZoneHelpers();
 	}
 	
 	override void OnInit()
