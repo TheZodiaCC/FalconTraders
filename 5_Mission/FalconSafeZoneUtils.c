@@ -1,9 +1,5 @@
 class FalconSafeZoneUtils
-{
-	static vector safeZonePos = Vector(9997, 10, 1663);
-	static int safeZoneRadius = 20;
-	//static ref array<FalconSafeZone> safeZones = new array<FalconSafeZone>();
-	
+{	
 	static ref FalconSafeZoneHelpers SafeZoneHelpers = new FalconSafeZoneHelpers();
 	
 	
@@ -17,20 +13,17 @@ class FalconSafeZoneUtils
 		return safeZones;
 	}
 	
-	static void checkPlayersInSafezone(array<Man> players) {
+	static void checkPlayersInSafezone(array<Man> players, array<ref FalconSafeZone> safeZones) {
 		float playerSafeZoneDistance;
 		
 		PlayerBase playerInSafeZone;
 		string playerID;
 		
-		array<ref FalconSafeZone> safeZones = FalconSafeZoneUtils.getSafeZones();
 		
 		foreach (Man player : players)
 		{
 			foreach (FalconSafeZone safeZone : safeZones)
 			{
-				Print(safeZone.getSafeZoneName());
-				
 				playerSafeZoneDistance = vector.Distance(safeZone.getSafeZonePos().ToVector(), player.GetPosition());
 			
 				if (playerSafeZoneDistance <= safeZone.getSafeZoneRadius()) 

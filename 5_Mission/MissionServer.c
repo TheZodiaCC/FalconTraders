@@ -5,12 +5,15 @@ modded class MissionServer
 	private int currentTime;
 	static int nTime = 0;
 	
+	private ref array<ref FalconSafeZone> safeZones = new ref array<ref FalconSafeZone>();
+	
 	ref FalconSafeZoneHelpers SafeZoneHelpers;
 	
 	
 	void MissionServer()
 	{
 		SafeZoneHelpers = new FalconSafeZoneHelpers();
+		safeZones = FalconSafeZoneUtils.getSafeZones();
 	}
 	
 	override void OnInit()
@@ -29,7 +32,7 @@ modded class MissionServer
 		{
 			GetGame().GetPlayers(players);
 			
-			FalconSafeZoneUtils.checkPlayersInSafezone(players);
+			FalconSafeZoneUtils.checkPlayersInSafezone(players, safeZones);
 			
 			nTime = currentTime;
 		}
