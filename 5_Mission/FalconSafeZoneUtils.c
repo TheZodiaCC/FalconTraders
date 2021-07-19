@@ -3,14 +3,14 @@ class FalconSafeZoneUtils
 	static vector safeZonePos = Vector(9997, 10, 1663);
 	static int safeZoneRadius = 20;
 	
+	static ref FalconSafeZoneHelpers SafeZoneHelpers = new FalconSafeZoneHelpers();
+	
 	
 	static void checkPlayersInSafezone(array<Man> players) {
 		float playerSafeZoneDistance;
 		
-		PlayerBase p;
+		PlayerBase playerInSafeZone;
 		string playerID;
-		
-		ref FalconSafeZoneHelpers SafeZoneHelpers = new FalconSafeZoneHelpers();
 		
 		foreach (Man player : players)
 		{
@@ -18,21 +18,21 @@ class FalconSafeZoneUtils
 			
 			if (playerSafeZoneDistance <= safeZoneRadius) 
 			{
-				p = PlayerBase.Cast(player);
-				playerID = p.GetIdentity().GetId();
+				playerInSafeZone = PlayerBase.Cast(player);
+				playerID = playerInSafeZone.GetIdentity().GetId();
 				
-				p.setIsInSafeZone(true);
-				p.setHasGM(true);
+				playerInSafeZone.setIsInSafeZone(true);
+				playerInSafeZone.setHasGM(true);
 				
 				SafeZoneHelpers.turnOnMarks(playerID);
 			}
 			else
 			{
-				p = PlayerBase.Cast(player);
-				playerID = p.GetIdentity().GetId();
+				playerInSafeZone = PlayerBase.Cast(player);
+				playerID = playerInSafeZone.GetIdentity().GetId();
 				
-				p.setIsInSafeZone(false);
-				p.setHasGM(false);
+				playerInSafeZone.setIsInSafeZone(false);
+				playerInSafeZone.setHasGM(false);
 				
 				SafeZoneHelpers.turnOffMarks(playerID);
 			}

@@ -23,7 +23,7 @@ modded class MissionGameplay {
 			player = PlayerBase.Cast(GetGame().GetPlayer());
 			
 			if (player) {
-				Print(player.isInSafeZone());
+				//Print(player.isInSafeZone());
 			
 				if (player.isInSafeZone())
 				{
