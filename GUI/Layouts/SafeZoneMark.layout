@@ -1,5 +1,5 @@
 FrameWidgetClass rootFrame {
- position 1662.51001 982.39099
+ position 1667.22998 9.29053
  size 221.04799 85.85151
  hexactpos 1
  vexactpos 1
@@ -17,7 +17,7 @@ FrameWidgetClass rootFrame {
    {
     TextWidgetClass TextWidget {
      ignorepointer 1
-     position -0.00004 -0
+     position -0.00004 0
      size 226.70599 88.16329
      hexactpos 1
      vexactpos 1

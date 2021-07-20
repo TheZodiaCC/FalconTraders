@@ -49,4 +49,8 @@ class FalconSafeZoneUtils
 			}
 		}
 	}
+	
+	static void initSafezones() {
+		
+	}
 }

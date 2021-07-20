@@ -25,7 +25,7 @@ modded class MissionGameplay {
 			if (player) {
 				//Print(player.isInSafeZone());
 			
-				if (player.isInSafeZone())
+				if (player.getIsInSafeZone())
 				{
 					sZMark.showMark();
 				}
