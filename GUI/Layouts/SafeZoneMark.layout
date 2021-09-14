@@ -23,7 +23,8 @@ FrameWidgetClass rootFrame {
      vexactpos 1
      hexactsize 1
      vexactsize 1
-     text "SZ"
+     text "SafeZone"
+     text_proportion 0.6
      "text halign" center
      "text valign" center
     }

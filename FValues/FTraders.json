@@ -1,0 +1,67 @@
+[
+  {
+    "traderId": 1,
+    "type": "FalconTraderTaki",
+    "trader": "Hardware",
+    "spawnPoint": "9993 11 1663",
+    "direction": "0 0 0",
+    "maxHumanity": 2000000,
+    "minHumanity": -2000000,
+    "head": "",
+    "body": "TShirt_Green",
+    "pants": "Jeans_Black",
+    "boots": "AthleticShoes_Black"
+  },
+  {
+    "traderId": 2,
+    "type": "FalconTraderHassan",
+    "trader": "Medical",
+    "spawnPoint": "9998 11 1663",
+    "direction": "0 0 0",
+    "maxHumanity": 2000000,
+    "minHumanity": -2000000,
+    "head": "",
+    "body": "TShirt_Black",
+    "pants": "Jeans_Black",
+    "boots": "AthleticShoes_Black"
+  },
+  {
+    "traderId": 3,
+    "type": "FalconTraderHassan",
+    "trader": "Medical",
+    "spawnPoint": "9989 11 1663",
+    "direction": "0 0 -1",
+    "maxHumanity": 2000000,
+    "minHumanity": 5000,
+    "head": "",
+    "body": "TShirt_Blue",
+    "pants": "Jeans_Black",
+    "boots": "AthleticShoes_Black"
+  },
+  {
+    "traderId": 4,
+    "type": "FalconTraderHassan",
+    "trader": "Medical",
+    "spawnPoint": "9985 11 1663",
+    "direction": "0 0 -0.5",
+    "maxHumanity": -5000,
+    "minHumanity": -2000000,
+    "head": "",
+    "body": "TShirt_Red",
+    "pants": "Jeans_Black",
+    "boots": "AthleticShoes_Black"
+  },
+  {
+    "traderId": 5,
+    "type": "FalconTraderHassan",
+    "trader": "Currency",
+    "spawnPoint": "9980 11 1663",
+    "direction": "0 0 0",
+    "maxHumanity": 2000000,
+    "minHumanity": -2000000,
+    "head": "",
+    "body": "TShirt_Red",
+    "pants": "Jeans_Black",
+    "boots": "AthleticShoes_Black"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Apple",
+    "sell": 20,
+    "buy": 5
+  },
+  {
+    "name": "Plum",
+    "sell": 5,
+    "buy": 5
+  },
+  {
+    "name": "M4A1",
+    "sell": 10,
+    "buy": 15
+  },
+  {
+    "name": "Goldbar",
+    "sell": 80,
+    "buy": 100
+  }
+]

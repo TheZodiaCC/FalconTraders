@@ -1,0 +1,4 @@
+class FalconTraderTaki extends FalconTrader
+{
+	
+}

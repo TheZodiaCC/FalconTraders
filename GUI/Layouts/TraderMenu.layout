@@ -1,0 +1,232 @@
+FrameWidgetClass rootFrame {
+ position 10 10
+ size 1879.20996 1060.55005
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  PanelWidgetClass PanelWidget0 {
+   ignorepointer 1
+   position 15.1895 15.1895
+   size 1851.43005 1032.7699
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style rover_sim_black
+   {
+    PanelWidgetClass PanelWidget1 {
+     ignorepointer 1
+     position 12.5947 12.5948
+     size 1826.23999 88.16319
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style rover_sim_black
+     {
+      TextWidgetClass SafeZoneNameTEXT {
+       ignorepointer 1
+       position 25.1896 12.5947
+       size 428.22202 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass TraderNameTEXT {
+       ignorepointer 1
+       position 466.00601 12.5947
+       size 541.57501 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass MoneyBalanceTEXT {
+       ignorepointer 1
+       position 1410.60999 12.5947
+       size 403.03299 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass MoneyBalanceTITLE {
+       ignorepointer 1
+       position 1045.36011 12.5947
+       size 352.65298 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Money Balance"
+       "size to text h" 0
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+    PanelWidgetClass PanelWidget2 {
+     ignorepointer 1
+     position 12.5948 113.353
+     size 1826.23999 906.82202
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style rover_sim_black
+     {
+      TextListboxWidgetClass TraderItemsLIST {
+       position 994.98505 88.16299
+       size 818.65894 755.685
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       lines 15
+       "highlight row" 1
+      }
+      TextWidgetClass TradersItemsTEXT {
+       ignorepointer 1
+       position 994.98505 12.5945
+       size 818.65894 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Trader Items"
+       "size to text h" 0
+       "size to text v" 0
+       "text halign" center
+       "text valign" center
+      }
+      ItemPreviewWidgetClass ItemPreviewWIDGET {
+       ignorepointer 1
+       position 12.5947 12.5945
+       size 969.79602 440.81601
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       draggable 0
+      }
+      PanelWidgetClass PanelWidget3 {
+       ignorepointer 1
+       position 12.5947 12.5945
+       size 969.79602 440.81601
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Outline
+      }
+      TextWidgetClass CurrentItemTEXT {
+       ignorepointer 1
+       position 88.16319 478.60001
+       size 818.65894 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       "size to text h" 0
+       "size to text v" 0
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass BuyForTEXT {
+       ignorepointer 1
+       position 478.60101 566.76404
+       size 428.22202 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       "size to text h" 0
+       "size to text v" 0
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass SellForTEXT {
+       ignorepointer 1
+       position 478.60101 654.92706
+       size 428.22202 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       "size to text h" 0
+       "size to text v" 0
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass SellForTitle {
+       ignorepointer 1
+       position 88.16319 654.92706
+       size 377.84299 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Sell Price"
+       "size to text h" 0
+       "size to text v" 0
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass BuyForTitle {
+       ignorepointer 1
+       position 88.16319 566.76404
+       size 377.84299 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Buy Price"
+       "size to text h" 0
+       "size to text v" 0
+       "text halign" center
+       "text valign" center
+      }
+      ButtonWidgetClass BuyBUTTON {
+       position 88.16319 755.685
+       size 377.84299 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "BUY"
+      }
+      ButtonWidgetClass SellBUTTON {
+       position 478.60101 755.685
+       size 377.84201 62.9737
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "SELL"
+      }
+     }
+    }
+    TextWidgetClass InfoTitle {
+     ignorepointer 1
+     position 12.5947 982.39099
+     size 1826.23999 35.4053
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Remeber to have free slots for coins"
+     "text valign" center
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+  "weaponsNames": [
+    "M4A1"
+  ],
+  "hardwareTradersItems": [
+    "Plum", "M4A1"
+  ],
+  "medicalTradersItems": [
+    "Apple"
+  ],
+  "currencyTradersItems": [
+    "Goldbar"
+  ],
+  "foodTradersItems": [
+
+  ]
+}
