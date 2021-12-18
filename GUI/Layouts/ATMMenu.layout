@@ -1,0 +1,141 @@
+FrameWidgetClass rootFrame {
+ position 10 10
+ size 1879.20996 1060.55005
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  PanelWidgetClass PanelWidget0 {
+   ignorepointer 1
+   position 506.38498 304.86899
+   size 894.22705 390.43799
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style rover_sim_black
+   {
+    TextWidgetClass ATMTITLE {
+     ignorepointer 1
+     position -0.00011 -0.00017
+     size 894.22705 50.379
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Falcon ATM"
+     "exact text" 1
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass TextWidget0 {
+     ignorepointer 1
+     position -0.00009 88.16309
+     size 447.11401 37.7842
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Your Account Balance"
+     "exact text" 1
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass YourAccountBalanceTEXT {
+     ignorepointer 1
+     position 453.41101 88.16309
+     size 434.51901 37.7842
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     "exact text" 1
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass TextWidget2 {
+     ignorepointer 1
+     position -0.00009 188.92101
+     size 447.11401 37.7842
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Max Bank Balance"
+     "exact text" 1
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass MaxBankBalanceTEXT {
+     ignorepointer 1
+     position 453.41101 188.92101
+     size 434.51901 37.7842
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     "exact text" 1
+     "text halign" center
+     "text valign" center
+    }
+    ButtonWidgetClass DepositBUTTON {
+     position 12.5946 302.27402
+     size 428.22202 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style MenuDefault
+     text "Deposit"
+    }
+    ButtonWidgetClass WithdrawBUTTON {
+     position 453.41101 302.27402
+     size 428.22202 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style MenuDefault
+     text "Withdraw"
+    }
+    TextWidgetClass TextWidget3 {
+     ignorepointer 1
+     position -0.00009 138.54199
+     size 447.11401 37.7842
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Money in Inventory"
+     "exact text" 1
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass MoneyInInventoryTEXT {
+     ignorepointer 1
+     position 453.41101 138.54199
+     size 434.51901 37.7842
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     "exact text" 1
+     "text halign" center
+     "text valign" center
+    }
+    EditBoxWidgetClass MoneyINPUT {
+     position 12.5947 239.3
+     size 869.03802 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Default
+     "Use default text" 0
+     "exact text" 1
+    }
+   }
+  }
+ }
+}

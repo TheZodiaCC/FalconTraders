@@ -86,6 +86,18 @@ class CfgMods
 	};
 };
 
+class CfgSlots
+{
+	class GoldNuggetSlot
+	{
+		name = "GoldNuggetSlot";
+		displayName = "Gold Nugget";
+		ghostIcon = "";
+		stackMax = 10;
+	};
+};
+
+
 class CfgVehicles
 {
 	class SurvivorMale_Base;
@@ -150,6 +162,52 @@ class CfgVehicles
 	};
 
 	class Inventory_Base;
+
+	class GoldFrame: Inventory_Base
+	{
+		scope = 2;
+		displayName = "Gold Frame";
+		descriptionShort = "Gold Frame";
+		model="FalconTraders\Items\goldbar\gold_bar.p3d";
+		rotationFlags=90;
+		itemSize[] = {4,2};
+		weight = 400;
+		fragility=0.000001;
+		attachments[]={"GoldNuggetSlot"};
+
+		class Cargo
+		{
+			itemsCargoSize[] = {0,0};
+		};
+		class GUIInventoryAttachmentsProps
+		{
+			class BaseBuildingAttachments
+			{
+				name = "Gold Nuggets";
+				description = "";
+				icon = "";
+				attachmentSlots[] = {"GoldNuggetSlot"};
+			};
+		};
+	};
+
+	class FalconATM: Inventory_Base
+	{
+		scope=1;
+		displayName="ATM";
+		descriptionShort="";
+		model="FalconTraders\Items\goldnode\goldnode.p3d";
+		rotationFlags=0;
+		weight=5000;
+		itemSize[]={15,15};
+		fragility=0.00000001;
+		canBeDigged = 0;
+		heavyItem = 1;
+		itemBehaviour = 0;
+		placement = "ForceSlopeOnTerrain";
+		physLayer = "item_large";
+	};
+
 	class Goldbar: Inventory_Base
 	{
 		scope=2;
@@ -188,10 +246,11 @@ class CfgVehicles
 		canBeSplit = 1;
 		varQuantityInit = 1.0;
 		varQuantityMin = 0.0;
-		varQuantityMax = 5.0;
+		varQuantityMax = 10.0;
 		weight=1500;
 		itemSize[]={2,2};
 		fragility=0.00000001;
+		inventorySlot[] = {"GoldNuggetSlot"};
 	}
 
 	class GoldRock: Inventory_Base

@@ -8,6 +8,10 @@ modded class MissionBase {
 					menu = new TraderMenu;
 					break;
 				}
+				case 1214649: {
+					menu = new ATMMenu;
+					break;
+				}
             }
             if (menu) {
                 menu.SetID(id);

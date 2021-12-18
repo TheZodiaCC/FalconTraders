@@ -1,10 +1,10 @@
 class FalconSafeZoneUtils
 {	
-	const static string safeZonesDataPath = "$profile:/FValues/FSafeZones.json";
-	const static string tradersDataPath = "$profile:/FValues/FTraders.json";
-	const static string tradersStocksPath = "$profile:/FValues/FTradersStock.json";
-	const static string traderItemsDetailsPath = "$profile:/FValues/FTradersPrices.json";
-	const static string coinName = "Goldcoin";
+	const static string safeZonesDataPath = TradersConsts.SAFE_ZONES_DATA_PATH;
+	const static string tradersDataPath = TradersConsts.TRADERS_DATA_PATH;
+	const static string tradersStocksPath = TradersConsts.TRADERS_STOCKS_DATA_PATH;
+	const static string traderItemsDetailsPath = TradersConsts.TRADERS_ITEMS_DETAILS_PATH;
+	const static string coinName = TradersConsts.COIN_ITEM_NAME;
 	
 	static ref array<ref FalconSafeZone> getSafeZones() 
 	{

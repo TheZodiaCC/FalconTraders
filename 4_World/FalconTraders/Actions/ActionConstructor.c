@@ -5,6 +5,8 @@ modded class ActionConstructor
 		super.RegisterActions(actions);
 		
 		actions.Insert(ActionTrade);
-		actions.Insert(ActionMineGold);
+		actions.Insert(ActionMineResource);
+		actions.Insert(ActionATM);
+		actions.Insert(ActionSmeltGold);
 	}
 }

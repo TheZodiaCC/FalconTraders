@@ -129,12 +129,12 @@ class TraderMenuBack
 					}
 					else
 					{
-						GetRPCManager().SendRPC("FalconTraders", "FTmessagePlayerC", new Param1<string>("Can't sell ruined item"), true,  player.GetIdentity());
+						TradersMessagesUtils.messageClient(TradersMessagesConsts.CANT_SELL_RUINED_ITEM, player);
 					}
 				}
 				else
 				{
-					GetRPCManager().SendRPC("FalconTraders", "FTmessagePlayerC", new Param1<string>("Can't sell item that is not in your inventory"), true,  player.GetIdentity());
+					TradersMessagesUtils.messageClient(TradersMessagesConsts.ITEM_NOT_IN_INVENTORY, player);
 				}
 			}
        	}
@@ -170,7 +170,7 @@ class TraderMenuBack
 				}
 				else
 				{
-					GetRPCManager().SendRPC("FalconTraders", "FTmessagePlayerC", new Param1<string>("You don't have enought money to buy this item"), true,  player.GetIdentity());
+					TradersMessagesUtils.messageClient(TradersMessagesConsts.NOT_ENOUGHT_MONEY_TO_BUY, player);
 				}
 			}
        	}

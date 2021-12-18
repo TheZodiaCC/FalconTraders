@@ -1,44 +1,11 @@
-class GoldRock extends Inventory_Base
+class GoldRock extends MiningRock
 {	
-	private int goldAmmount;
-	
-	
 	override void EEInit()
     {
         super.EEInit();
 		
-		goldAmmount = Math.RandomInt(GoldMiningConsts.MIN_GOLD_AMMOUNT, GoldMiningConsts.MAX_GOLD_AMMOUNT);
-	}
-	
-	int getGoldAmmount()
-	{
-		return goldAmmount;
-	}
-	
-	void reduceGoldAmmount()
-	{
-		goldAmmount -= GoldMiningConsts.GOLD_PER_DROP;
-		
-		if (goldAmmount <= 0)
-		{
-			Delete();
-		}
-	}
-	
-	override bool CanPutIntoHands(EntityAI parent)
-	{
-		return false;
-	}
-	
-	override bool CanPutInCargo( EntityAI parent )
-	{
-		return false;
-	}
-	
-	override bool OnStoreLoad(ParamsReadContext ctx, int version)
-	{
-		Delete();
-		
-		return true;
+		setResourcesAmmount(Math.RandomInt(MiningConsts.MIN_GOLD_AMMOUNT, MiningConsts.MAX_GOLD_AMMOUNT));
+		setReseourcesPerDrop(MiningConsts.GOLD_PER_DROP);
+		setResourceItem(MiningConsts.GOLD_NUGGET_ITEM);
 	}
 }

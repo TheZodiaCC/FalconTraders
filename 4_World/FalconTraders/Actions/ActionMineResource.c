@@ -1,18 +1,18 @@
-class ActionMineGoldCB : ActionContinuousBaseCB
+class ActionMineResourceCB : ActionContinuousBaseCB
 {
-	private const float TIME_BETWEEN_MATERIAL_DROPS = GoldMiningConsts.TIME_TO_MINE_GOLD;
+	private const float TIME_BETWEEN_MATERIAL_DROPS = MiningConsts.TIME_TO_MINE_GOLD;
 
 	override void CreateActionComponent()
 	{
-		m_ActionData.m_ActionComponent = new CAContinuousMineGold(TIME_BETWEEN_MATERIAL_DROPS);
+		m_ActionData.m_ActionComponent = new CAContinuousMineResource(TIME_BETWEEN_MATERIAL_DROPS);
 	}
 };
 
-class ActionMineGold: ActionContinuousBase
+class ActionMineResource: ActionContinuousBase
 {
-	void ActionMineGold()
+	void ActionMineResource()
 	{
-		m_CallbackClass = ActionMineGoldCB;
+		m_CallbackClass = ActionMineResourceCB;
 		m_CommandUID = DayZPlayerConstants.CMD_ACTIONFB_MINEROCK;
 		m_FullBody = true;
 		m_StanceMask = DayZPlayerConstants.STANCEMASK_ERECT;
@@ -33,7 +33,7 @@ class ActionMineGold: ActionContinuousBase
 			return false;
 		}
 
-		GoldRock rock = GoldRock.Cast(target.GetObject());
+		MiningRock rock = MiningRock.Cast(target.GetObject());
 		
 		if (rock)
 		{
@@ -45,23 +45,19 @@ class ActionMineGold: ActionContinuousBase
 
 	override string GetText()
 	{
-		return "Mine Gold";
+		return "Mine Resource";
 	}
 	
 	override void OnFinishProgressServer( ActionData action_data )
 	{	
 		if (action_data)
 		{
-			GoldRock goldRock = GoldRock.Cast(action_data.m_Target.GetObject());
+			MiningRock rock = MiningRock.Cast(action_data.m_Target.GetObject());
 			
-			if (goldRock)
+			if (rock)
 			{
-				goldRock.reduceGoldAmmount();
-				
-				for (int i = 0; i < GoldMiningConsts.GOLD_PER_DROP; i++)
-				{
-					GetGame().CreateObject("GoldNugget", action_data.m_Player.GetPosition(), false, false, false);
-				}
+				rock.reduceResourcesAmmount();
+				rock.spawnResources(action_data.m_Player.GetPosition());
 			}
 		}
 	}

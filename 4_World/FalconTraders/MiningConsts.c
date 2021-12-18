@@ -1,5 +1,7 @@
-class GoldMiningConsts
+class MiningConsts
 {
+	static const string GOLD_ROCK_ITEM = "GoldRock";
+	static const string GOLD_NUGGET_ITEM = "GoldNugget";
 	static const float TIME_TO_MINE_GOLD = 10;
 	static const int MIN_GOLD_AMMOUNT = 2;
 	static const int MAX_GOLD_AMMOUNT = 20;

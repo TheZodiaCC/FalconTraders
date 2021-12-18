@@ -24,6 +24,7 @@ FrameWidgetClass rootFrame {
      hexactsize 1
      vexactsize 1
      text "SafeZone"
+     "exact text" 1
      text_proportion 0.6
      "text halign" center
      "text valign" center

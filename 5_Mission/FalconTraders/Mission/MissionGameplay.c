@@ -2,12 +2,14 @@ modded class MissionGameplay {
 
 	private ref SafeZoneMark sZMark = new SafeZoneMark();
 	ref TraderMenu traderMenu;
+	ref ATMMenu atmMenu;
 	
 	
 	void MissionGameplay() {
 		GetRPCManager().AddRPC( "FalconTraders", "openTradeMenuC", this, SingeplayerExecutionType.Server );
 		GetRPCManager().AddRPC( "FalconTraders", "switchSZMarkC", this, SingeplayerExecutionType.Server );
 		GetRPCManager().AddRPC( "FalconTraders", "FTmessagePlayerC", this, SingeplayerExecutionType.Server );
+		GetRPCManager().AddRPC( "FalconTraders", "openATMMenuC", this, SingeplayerExecutionType.Server );
 	}
 	
 	private void FTmessagePlayerC( CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target )
@@ -61,6 +63,28 @@ modded class MissionGameplay {
         }
 	}
 	
+	private void openATMMenuC(CallType type, ParamsReadContext ctx, PlayerIdentity sender, Object target) {
+		Param1<string> data;
+		
+        if ( !ctx.Read( data ) ) return;
+        
+        if( type == CallType.Client ) {
+			if (atmMenu) 
+			{						
+				if (!atmMenu.isMenuOpened()) 
+				{
+                    openATMMenu();
+               	}
+           	} 
+			else if (!atmMenu) 
+			{
+				atmMenu = ATMMenu.Cast(GetUIManager().EnterScriptedMenu(1214649, null));
+				
+                openATMMenu();
+            }
+        }
+	}
+	
 	private void switchSZMarkC( CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target )
     {
         Param1<bool> data;
@@ -95,6 +119,14 @@ modded class MissionGameplay {
                     closeTraderMenu();
                 } 
             } 
+			
+			if (atmMenu)
+			{
+				if (atmMenu.isMenuOpened())
+				{
+					closeATMMenu();
+				}
+			}
 		}
 	}
 	
@@ -108,5 +140,17 @@ modded class MissionGameplay {
 	{
 		traderMenu.setMenuOpened(false);
         GetGame().GetUIManager().HideScriptedMenu(traderMenu);
+	}
+	
+	private void openATMMenu()
+	{
+		GetGame().GetUIManager().ShowScriptedMenu(atmMenu, NULL);
+        atmMenu.setMenuOpened(true);
+	}
+	
+	private void closeATMMenu()
+	{
+		atmMenu.setMenuOpened(false);
+        GetGame().GetUIManager().HideScriptedMenu(atmMenu);
 	}
 }

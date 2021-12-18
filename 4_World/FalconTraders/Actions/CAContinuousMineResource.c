@@ -1,6 +1,6 @@
-class CAContinuousMineGold : CAContinuousMineWood
+class CAContinuousMineResource : CAContinuousMineWood
 {	
-	void CAContinuousMineGold(float time_between_drops)
+	void CAContinuousMineResource(float time_between_drops)
 	{
 		m_TimeBetweenMaterialDrops = time_between_drops;
 	}
@@ -43,7 +43,7 @@ class CAContinuousMineGold : CAContinuousMineWood
 				{
 					if (action_data.m_MainItem)
 					{
-						action_data.m_MainItem.DecreaseHealth( "", "", GoldMiningConsts.MINING_TOOL_DAMAGE );
+						action_data.m_MainItem.DecreaseHealth( "", "", MiningConsts.MINING_TOOL_DAMAGE );
 					}
 					
 				}

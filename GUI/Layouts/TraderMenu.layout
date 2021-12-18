@@ -34,6 +34,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       "exact text" 1
        "text halign" center
        "text valign" center
       }
@@ -45,6 +46,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       "exact text" 1
        "text halign" center
        "text valign" center
       }
@@ -56,6 +58,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       "exact text" 1
        "text halign" center
        "text valign" center
       }
@@ -68,6 +71,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        text "Money Balance"
+       "exact text" 1
        "size to text h" 0
        "text halign" center
        "text valign" center
@@ -103,6 +107,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        text "Trader Items"
+       "exact text" 1
        "size to text h" 0
        "size to text v" 0
        "text halign" center
@@ -136,6 +141,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       "exact text" 1
        "size to text h" 0
        "size to text v" 0
        "text halign" center
@@ -149,6 +155,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       "exact text" 1
        "size to text h" 0
        "size to text v" 0
        "text halign" center
@@ -162,6 +169,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       "exact text" 1
        "size to text h" 0
        "size to text v" 0
        "text halign" center
@@ -176,6 +184,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        text "Sell Price"
+       "exact text" 1
        "size to text h" 0
        "size to text v" 0
        "text halign" center
@@ -190,6 +199,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        text "Buy Price"
+       "exact text" 1
        "size to text h" 0
        "size to text v" 0
        "text halign" center
@@ -202,6 +212,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       style MenuDefault
        text "BUY"
       }
       ButtonWidgetClass SellBUTTON {
@@ -211,6 +222,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       style MenuDefault
        text "SELL"
       }
      }
@@ -224,6 +236,7 @@ FrameWidgetClass rootFrame {
      hexactsize 1
      vexactsize 1
      text "Remeber to have free slots for coins"
+     "exact text" 0
      "text valign" center
     }
    }

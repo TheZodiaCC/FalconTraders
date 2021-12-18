@@ -1,20 +1,24 @@
 class FalconMiningUtils
 {	
-	const static string safeZonesDataPath = "$profile:/FValues/FTGoldZones.json";
+	const static string goldMiningZonesData = TradersConsts.GOLD_MINING_ZONES_DATA_PATH;
 	
-	static ref array<ref MiningZone> getMiningZones() 
+	static ref array<ref MiningZone> getMiningZones(string dataPath) 
 	{
 		ref array<ref MiningZone> miningZones = new ref array<ref MiningZone>();
 		
-		JsonFileLoader<ref array<ref MiningZone>>.JsonLoadFile(safeZonesDataPath, miningZones);
+		JsonFileLoader<ref array<ref MiningZone>>.JsonLoadFile(dataPath, miningZones);
 		
 		return miningZones;
 	}
 	
 	static void initMiningZones()
 	{
+		spawnRocks(getMiningZones(goldMiningZonesData));
+	}
+	
+	static void spawnRocks(array<ref MiningZone> miningZones)
+	{
 		array<vector> positions = new array<vector>();
-		array<ref MiningZone> miningZones = new array<ref MiningZone>();
 		vector zonePos;
 		int zoneRadius;
 		int rocks;
@@ -22,15 +26,15 @@ class FalconMiningUtils
 		float x;
 		float y;
 		float z;
-
-		miningZones = getMiningZones();
+		
+		Object rock;
 		
 		for (int i = 0; i < miningZones.Count(); i++)
 		{
 			zonePos = miningZones[i].getZonePos().ToVector();
 			zoneRadius = miningZones[i].getZoneRadius();
 			
-			rocks = Math.RandomInt(GoldMiningConsts.MIN_GOLD_ROCKS_PER_ZONE, GoldMiningConsts.MAX_GOLD_ROCKS_PER_ZONE);
+			rocks = Math.RandomInt(MiningConsts.MIN_GOLD_ROCKS_PER_ZONE, MiningConsts.MAX_GOLD_ROCKS_PER_ZONE);
 			
 			for (int j = 0; j < rocks; j++)
 			{
@@ -40,16 +44,14 @@ class FalconMiningUtils
 				y = GetGame().SurfaceY(x, z);
 				
 				positions.Insert(Vector(x, y, z));
-				
-				//Print("Position: " + Vector(x, y, z).ToString());
 			}
-			
-			//Print("Positions Count " + positions.Count().ToString());
 		}
 		
 		for (int k = 0; k < positions.Count(); k++)
 		{
-			GetGame().CreateObject("GoldRock", positions[k], false, false, false);
+			rock = GetGame().CreateObject(MiningConsts.GOLD_ROCK_ITEM, positions[k], false, false, false);
+			
+			rock.PlaceOnSurface();
 		}
 	}
 }

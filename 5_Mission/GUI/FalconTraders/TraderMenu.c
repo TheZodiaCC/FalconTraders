@@ -119,7 +119,7 @@ class TraderMenu extends UIScriptedMenu
 		getTraderItems(traderId);
 		getTraderName(traderId);
 		getSafeZoneName();
-		getMoneyBalance();
+		GetGame().GetCallQueue(CALL_CATEGORY_SYSTEM).CallLater(getMoneyBalance,  500, false);
 		
 		//markOwnedItems();
 	}
@@ -318,7 +318,8 @@ class TraderMenu extends UIScriptedMenu
 		}
 	}
 	
-	private void getMoneyBalance() {
+	private void getMoneyBalance() 
+	{
 		traderMenuBack.getMoneyBalance();
 	}
 	
