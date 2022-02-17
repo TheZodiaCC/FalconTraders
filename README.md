@@ -2,6 +2,8 @@
  
 Traders & SafeZones system for DayZ Standalone
 
+Models by https://github.com/JakubPPawlak
+
 ---
 
 ### Features
@@ -26,3 +28,9 @@ Traders & SafeZones system for DayZ Standalone
 - For NPC Traders customization see `FValues/FTraders.json`
 - For Items prices customization see `FValues/FTradersPrices.json`
 - For Traders items customization see `FValues/FTradersStock.json`
+
+### Media
+![TRADER](/media/t1.png)
+
+![GOLD](/media/g_1.png)
+![GOLD](/media/g_2.png)
